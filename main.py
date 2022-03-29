@@ -7,7 +7,6 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
 from keep_alive import keep_alive
 
-
 TOKEN = os.getenv('TOKEN')
 dp = Dispatcher()
 
