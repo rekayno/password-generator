@@ -24,11 +24,6 @@ async def echo_handler(message: types.Message) -> Any:
             return
         await message.answer(generate_password(int(message.text)))
         
-
-def main() -> None:
-    bot = Bot(TOKEN, parse_mode='HTML')
-    dp.run_polling(bot)
-
 def generate_password(length: int):
     password = []
     for i in range(int(length)):
@@ -36,6 +31,9 @@ def generate_password(length: int):
     random.shuffle(password)
     return ''.join(password)
 
+def main() -> None:
+    bot = Bot(TOKEN, parse_mode='HTML')
+    dp.run_polling(bot)
 
 
 if __name__ == '__main__':
