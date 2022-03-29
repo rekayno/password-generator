@@ -24,11 +24,11 @@ async def echo_handler(message: types.Message) -> Any:
         if length > 1000:
             await message.answer('Maximum password length - 1000 characters')
             return
-        await message.answer(generate_password(int(message.text)))
+        await message.answer(generate_password(length))
         
 def generate_password(length: int):
     password = []
-    for i in range(int(length)):
+    for i in range(length):
         password.append(random.choice(characters))
     random.shuffle(password)
     return ''.join(password)
