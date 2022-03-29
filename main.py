@@ -1,9 +1,11 @@
 import os
+os.system('pip install -r requirements.txt')
 import string
 import random
 from typing import Any
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
+keep_alive()
 
 TOKEN = os.getenv('TOKEN')
 dp = Dispatcher()
