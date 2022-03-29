@@ -5,7 +5,8 @@ import random
 from typing import Any
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
-keep_alive()
+from keep_alive import keep_alive
+
 
 TOKEN = os.getenv('TOKEN')
 dp = Dispatcher()
@@ -39,4 +40,5 @@ def main() -> None:
 
 
 if __name__ == '__main__':
+    keep_alive()
     main()
