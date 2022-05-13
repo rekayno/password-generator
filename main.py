@@ -1,5 +1,4 @@
 import os
-os.system('pip install -r requirements.txt')
 import string
 import random
 from typing import Any
